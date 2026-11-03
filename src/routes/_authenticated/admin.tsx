@@ -75,12 +75,12 @@ function Admin() {
   const save = async (e: React.FormEvent) => {
     e.preventDefault();
     const price = Number(form.price), stock = Number(form.stock);
-    if (!form.name.trim() || price < 0 || stock < 0 || !Number.isInteger(stock)) return toast.error("Check the product details");
+    if (!form.name.trim() || price < 0 || stock < 0 || !Number.isInteger(stock)) { toast.error("Check the product details"); return; }
     const row = { name: form.name.trim(), sku: form.sku || null, category: form.category || null, price, stock, updated_at: new Date().toISOString() };
     const { error } = editing
       ? await supabase.from("products").update(row).eq("id", editing.id)
       : await supabase.from("products").insert(row);
-    if (error) return toast.error(error.message);
+    if (error) { toast.error(error.message); return; }
     toast.success(editing ? "Product updated" : "Product added");
     setOpen(false);
     qc.invalidateQueries({ queryKey: ["products"] });

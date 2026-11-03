@@ -66,7 +66,7 @@ function Pos() {
       _paid: Number(paid || 0),
     });
     setBusy(false);
-    if (error) return toast.error(error.message);
+    if (error) { toast.error(error.message); return; }
     toast.success(`Sale complete. Change: ${peso(change)}`);
     setCart([]); setPaid("");
     qc.invalidateQueries({ queryKey: ["products"] });
