@@ -1,14 +1,18 @@
-# Welcome to your Lovable project
+# Simpletill Stock And Sale
+
+i need to build a simple POS system with an admin dashboard, and cashier dashboard . it should have a login page to access the admin dashboard. make it simple but ready for deployment. the admin can add, delete, edit products' details
 
 This project was built with [Lovable](https://lovable.dev).
 
+**Live app**: https://simpletill-stock-and-sale.lovable.app
+
 ## Build with Lovable
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ec6e7aa3-08c3-5fdd-b2fe-f068e8223f2e).
 
 - **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
@@ -20,10 +24,3 @@ cd <repository-name>
 npm i
 npm run dev
 ```
-
-## Built with
-
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
